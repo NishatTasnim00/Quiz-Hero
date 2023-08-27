@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Blog</title>
+    <style>
+        body{
+            color: gray;
+            line-height: 2.5;
+        }
+        span {
+            font-weight: 500;
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="font-bold text-4xl mt-8 text-center text-teal-900">Simple Question Answer</h1>
+    <section class="p-12">
+        <div class="border-2 rounded-lg p-8 mb-10 bg-green-100">
+            <h1 class="font-bold text-teal-900">1. What is the difference between map, foreach, filter and find?</h1>
+            <p  ><span class="font-extrabold">Ans:</span> Map, forEach, filter, and find are all methods available in JavaScript used to perform operations on arrays. However,
+            each method has a specific purpose and functionality:</p>
+            <ol class="text-gray-500 list-[upper-roman] pl-8">
+                <li><span class="underline decoration-1">Map</span> : This method creates a new array by applying a given function to each element of the original array. The new array
+                will have the same number of elements as the original array. It is often used to transform data in an array.
+                <div>
+                    <span>Example:</span>
+                    <br>
+                    const arr = [1, 2, 3, 4, 5];
+                    <br>
+                    const newArr = arr.map(num => num * 2);
+                    <br>
+                    console.log(newArr);
+                    <br>
+                    Output: [2, 4, 6, 8, 10]
+                </div>
+                </li>
+                <li><span class="underline decoration-1">ForEach</span> : This method calls a provided function once for each element in an array. It does not return a new array, but it
+                can modify the original array.
+                <div>
+                    <span>Example:</span>
+                    <br>
+                    const arr = [1, 2, 3, 4, 5];
+                    <br>
+                    arr.forEach(num => console.log(num));
+                    <br>
+                    Output:
+                    <br> 1
+                    <br> 2
+                    <br> 3
+                    <br> 4
+                    <br> 5
+                </div>
+                </li>
+                <li><span class="underline decoration-1">Filter</span> : This method creates a new array with all elements that pass the test implemented by the provided function. It
+                returns a new array containing only the elements that meet the condition specified in the callback function.
+                <div>
+                    <span>Example:</span>
+                    <br>
+                    const arr = [1, 2, 3, 4, 5];
+                    <br>
+                    const filteredArr = arr.filter(num => num % 2 === 0);
+                    <br>
+                    console.log(filteredArr); 
+                    <br>
+                    Output: [2, 4]
+                </div>
+                </li>
+                <li><span class="underline decoration-1">Find</span> : This method returns the value of the first element in the array that satisfies the provided testing function. If
+                no value satisfies the function, undefined is returned.
+                <div>
+                    <span>Example:</span>
+                    <br>
+                    const arr = [1, 2, 3, 4, 5];
+                    <br>
+                    const foundNum = arr.find(num => num > 3);
+                    <br>
+                    console.log(foundNum);
+                    <br>
+                    Output: 4
+                </div>
+                
+                </li>
+            </ol>
+            <p  >In summary, map and filter both create new arrays, while forEach and find do not. forEach is used to loop over the
+            elements of an array and perform an action on each element, while find is used to find the first element in an array
+            that satisfies a condition.</p>
+            
+        </div>
+        
+        <div class="border-2 rounded-lg p-8 mb-10 bg-green-100">
+            <h1 class="font-bold text-teal-900">2. Difference between Local Storage, Session Storage and Cookies?</h1>
+            <p  ><span class="font-extrabold">Ans:</span> Local Storage, Session Storage, and Cookies are all used to store data in the user's browser, but there are some key differences between them:</p>
+            <ol class="text-gray-500 list-[upper-roman] pl-8">
+                <li><span class="underline decoration-1">LocalStorage</span> :
+                    <br>
+                    LocalStorage is a mechanism for storing key-value pairs in the browser. The data stored in LocalStorage remains available even after the browser is closed. LocalStorage is limited to a maximum of 5-10 MB of data per domain depending on the browser. LocalStorage can be used to store information such as user preferences, settings, and other data that needs to persist across sessions.
+                </li>
+                <li><span class="underline decoration-1">SessionStorage</span> :
+                    <br>
+                    SessionStorage is similar to LocalStorage, but the data stored in SessionStorage is available only for the duration of the browser session. When the browser is closed, the data stored in SessionStorage is deleted. SessionStorage is also limited to a maximum of 5-10 MB of data per domain depending on the browser. SessionStorage is commonly used to store information such as shopping cart items, form data, and other temporary data.
+                </li>
+                <li><span class="underline decoration-1">Cookies</span> :
+                    <br>    
+                    Cookies are small pieces of data that are sent from a website to a user's browser and stored on the user's computer. Cookies can be set to expire after a specific time or when the browser is closed. Cookies are limited to a maximum size  of 4 KB per domain. Cookies are commonly used to store user preferences, login information, and other data that needs to persist across sessions.
+                </li>
+                
+            </ol>
+            <p  >In summary, LocalStorage and SessionStorage are similar in that they allow you to store data on the client-side, but SessionStorage is cleared when the browser is closed, while LocalStorage is not. Cookies are also used to store data on the client-side, but they are limited in size and can be set to expire after a specific time.</p>
+        
+        
+        
+        </div>
+
+        <div class="border-2 rounded-lg p-8 mb-10 bg-green-100">
+            <h1 class="font-bold text-teal-900"	>3. What is Event loop and how it works??</h1>
+            <p  ><span class="font-extrabold">Ans:</span> The Event Loop is a critical concept in JavaScript and other programming languages that utilize an event-driven or asynchronous programming model. The event loop is a mechanism that allows JavaScript to handle and execute multiple tasks simultaneously without blocking the main execution thread.
+            <br>
+            In JavaScript, the event loop is responsible for managing the execution of asynchronous tasks such as timers, I/O operations, and event handlers. When an asynchronous task is started, it is added to the task queue. The event loop continually checks the task queue and picks up the next task when the current task has completed. This allows for non-blocking asynchronous code execution, which is essential for building responsive and efficient applications.
+            <br>
+            The event loop works as follows:
+            <ul class="list-disc pl-8">
+                <li>When an asynchronous task is started, it is added to the task queue.</li>
+                <li>The event loop continually checks the task queue for any pending tasks.</li>
+                <li>When the current task has completed, the event loop picks up the next task from the queue and executes it.</li>
+                <li>This process repeats until there are no more tasks in the queue.</li>
+            </ul>
+            It's important to note that the event loop is a single-threaded process, which means that only one task can be executed at a time. However, because the event loop allows for non-blocking execution, other tasks can be queued and processed while the current task is waiting for I/O or other operations to complete.
+            </p>
+        </div>
+
+        <div class="border-2 rounded-lg p-8 mb-10 bg-green-100">
+            <h1 class="font-bold text-teal-900" >4. How "quizTimer" function works in this code?</h1>
+            <p><span class="font-extrabold">Ans:</span> The function quizTimer takes a single argument dismiss, which is a boolean value. If dismiss is true, it clears the
+            timer interval using clearInterval and returns. If dismiss is false, it sets up the timer interval using setInterval.
+            <br>
+            The timer interval runs a function every 1000 milliseconds (1 second) that performs the following action:
+            <ol class="list-[upper-roman] pl-8">
+                <li>Finds the HTML element with the id 'count' using 'document.querySelector'.</li>
+                <li>Calculates the number of minutes and seconds that have elapsed based on the value of the 'count' variable.</li>
+                <li>Formats the minutes and seconds values as a string and sets the text content of the 'countHtml' element to that string.</li>
+                <li>Increments the 'count' variable by 1.</li>
+                <li>If the 'count' variable is greater than 60, it checks if 'count % 2 === 0'. If it is, it removes the 'text-red-300' class from it removes the 'text-red-700' class from the countHtml element and adds the'text-red-300' class.</li>
+            </ol>
+            <p>Overall, this function sets up a timer interval that updates the text content of an HTML element with the elapsed time in minutes and seconds format every second. Additionally, if the elapsed time is greater than 60 seconds, it alternates the color of the text content of the HTML element every other second to create a visual effect.</p>
+            
+            </p>
+        </div>
+
+        <div class="border-2 rounded-lg p-8 mb-10 bg-green-100">
+            <h1 class="font-bold text-teal-900">5. How "chooseQuiz" function works in this code?</h1>
+            <p><span class="font-extrabold">Ans:</span> This code represents a function that generates quiz options and handles selecting or choosing quiz options.
+                <br>
+                <br>
+                The 'displayQuizOptions' function takes in two parameters: 'quiz', which is an array of quiz options, and 'i', which is an index used to keep track of the quiz question being displayed. The function initializes a 'serial' variable to 1 and a generatedOptions variable to an empty string. It then loops through each option in the 'quiz' array and generates HTML code for a 'div' element that displays the option text and adds an 'onclick' attribute that calls the 'chooseQuiz' function
+                with the current index and selected option. The function then increments the 'serial' variable and continues the loop. Finally, the function returns the generated HTML code as a string.
+                <br>
+                <br>
+                The 'chooseQuiz' function takes in two parameters: 'index', which is the index of the quiz question being answered, and 'givenAns', which is the selected quiz option. The function first checks if there is already an answer stored for the quiz question by searching for an object in the answers array with a matching id property to the current quiz question's id. If an answer exists, the function uses a loop to find the existing answer object in the answers array and updates it with the newly selected option by replacing the givenAns property. If an answer does not exist, the function creates a new object with the quiz question's properties and the selected option and adds it to the 'answers' array. The function
+                then calls another function 'displayAnswers' with the 'answers' array to display the updated 'answers'.
+                <br>
+                <br>
+                Overall, 'chooseQuiz' function  is an important part of quiz-taking application that generates quiz options, allows users to select quiz options, and stores their answers in an array.
+           
+            </p>
+        </div>
+
+
+
+
+    </section>
+    
+</body>
+</html>
